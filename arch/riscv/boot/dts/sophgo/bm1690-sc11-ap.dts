@@ -18,6 +18,9 @@
 / {
 	/delete-node/ memory@80200000;
 	/delete-node/ bm-emmc@703000A000;
+	/delete-node/ thermal-zones;
+	/delete-node/ pwm-fan@0;
+	/delete-node/ pwm-fan@1;
 };
 
 / {

@@ -29,5 +29,26 @@
 	sg2044_srst: sg2044-reset@17 {
 		compatible = "sophgo,sg2042-hwmon-mcu";
 		reg = <0x17>;
+		#thermal-sensor-cells = <1>;
+	};
+};
+
+&pwmfan0 {
+	status = "disable";
+};
+
+&pwmfan1 {
+	status = "disable";
+};
+
+&thermal_zones {
+	status = "disable";
+
+	soc {
+		thermal-sensors = <&sg2044_srst 0>;
+	};
+
+	board {
+		thermal-sensors = <&sg2044_srst 1>;
 	};
 };

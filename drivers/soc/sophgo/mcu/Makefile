@@ -1,0 +1,1 @@
+obj-$(CONFIG_SOPHGO_MCU)	+= mcu.o
